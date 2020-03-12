@@ -12,8 +12,6 @@ public class AdminController {
     @GetMapping("/list")
     public String index(){
         System.out.println("Application with current profile "+name);
-        System.out.println("Application with current profile1 "+name);
-        System.out.println("Application with current profile1 "+name);
         return "index";
     }
 }
