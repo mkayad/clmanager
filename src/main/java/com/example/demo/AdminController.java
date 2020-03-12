@@ -1,13 +1,17 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class AdminController {
-
-    @GetMapping("/")
+    @Value("${name}")
+    public String name;
+    @GetMapping("/list")
     public String index(){
+        System.out.println("Application with current profile "+name);
         return "index";
     }
 }
