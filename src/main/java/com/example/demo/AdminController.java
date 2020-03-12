@@ -12,6 +12,7 @@ public class AdminController {
     @GetMapping("/list")
     public String index(){
         System.out.println("Application with current profile "+name);
+        System.out.println("Application with current profile "+name);
         return "index";
     }
 }
